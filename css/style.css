@@ -307,3 +307,20 @@ body {
   font-size: 0.9em;
   color: #bbbbbb;
 }
+/* Media Query */
+@media (max-width: 768px) {
+  .header {
+    align-items: flex-start;
+  }
+
+  .headerNavList {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.5rem 0;
+  }
+
+  .headerNavList li a {
+    text-align: center;
+    width: 100%;
+  }
+}
