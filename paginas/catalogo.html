@@ -27,23 +27,23 @@
         </nav>
     </header>
     
-    <h1 class="titulo-relojes">Gucci</h1>
+    <h1 class="titulo-relojes fade-in">Gucci</h1>
       <div class="galeria"> <!-- GUCCI -->
-          <div class="producto">
+          <div class="producto fade-in">
               <img src="../img/Gucci1.jpg" alt="Reloj 1" class="img-reloj">
               <p class="nombre-reloj">Reloj Gucci Royal</p>
               <p class="precio">$24,999</p>
               <button class="comprar-btn">Comprar</button>
           </div>
           
-          <div class="producto">
+          <div class="producto fade-in">
             <img src="../img/Gucci2.jpg" alt="Reloj 2" class="img-reloj">
             <p class="nombre-reloj">Reloj Gucci Black</p>
             <p class="precio">$19,999</p>
             <button class="comprar-btn">Comprar</button>
           </div>
 
-          <div class="producto">
+          <div class="producto fade-in">
             <img src="../img/Gucci3.jpg" alt="Reloj 3" class="img-reloj">
             <p class="nombre-reloj">Reloj Gucci Tradicional</p>
             <p class="precio">$14,999</p>
@@ -51,23 +51,23 @@
           </div>
       </div>
 
-    <h1 class="titulo-relojes">Tommy Hilfiger</h1>
+    <h1 class="titulo-relojes fade-in">Tommy Hilfiger</h1>
       <div class="galeria"> <!-- Tommy Hilfiger -->
-        <div class="producto">
+        <div class="producto fade-in">
           <img src="../img/Hilfiger1.jpg" alt="Reloj 1" class="img-reloj">
           <p class="nombre-reloj">Reloj Hilfiger Marine Gold</p>
           <p class="precio">$14,999</p>
           <button class="comprar-btn">Comprar</button>
         </div>
       
-        <div class="producto">
+        <div class="producto fade-in">
           <img src="../img/hilfiger2.jpg" alt="Reloj 2" class="img-reloj">
           <p class="nombre-reloj">Reloj Hilfiger Blue</p>
           <p class="precio">$12,999</p>
           <button class="comprar-btn">Comprar</button>
         </div>
 
-        <div class="producto">
+        <div class="producto fade-in">
           <img src="../img/hilfiger3.jpg" alt="Reloj 3" class="img-reloj">
           <p class="nombre-reloj">Reloj Hilfiger Rs</p>
           <p class="precio">$24,999</p>
@@ -75,29 +75,48 @@
         </div>
     </div>
 
-    <h1 class="titulo-relojes">Rolex</h1>
+    <h1 class="titulo-relojes fade-in">Rolex</h1>
       <div class="galeria"> <!-- Rolex -->
-        <div class="producto">
+        <div class="producto fade-in">
           <img src="../img/rolex1.jpg" alt="Reloj 1" class="img-reloj">
           <p class="nombre-reloj">Reloj Rolex Gold Olive</p>
           <p class="precio">$14,999</p>
           <button class="comprar-btn">Comprar</button>
       </div>
 
-      <div class="producto">
+      <div class="producto fade-in">
         <img src="../img/rolex2.jpg" alt="Reloj 2" class="img-reloj">
         <p class="nombre-reloj">Reloj Rolex Full Gold</p>
         <p class="precio">$24,999</p>
         <button class="comprar-btn">Comprar</button>
       </div>
-      
-      <div class="producto">
+
+      <div class="producto fade-in">
         <img src="../img/rolex3.jpg" alt="Reloj 3" class="img-reloj">
         <p class="nombre-reloj">Reloj Rolex Panda</p>
         <p class="precio">$29,999</p>
         <button class="comprar-btn">Comprar</button>
       </div>
     </div>
+
+    <script> /* Efecto de Aparicion */
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+      </script>
 
     <footer class="footer">
       <div class="footer-container">

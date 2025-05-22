@@ -25,23 +25,23 @@
             </ul>
         </nav>
     </header>
-    <h1 class="titulo-relojes">Swarovski</h1>
+    <h1 class="titulo-relojes fade-in">Swarovski</h1>
       <div class="galeria"> <!-- Swarovski -->
-        <div class="producto">
+        <div class="producto fade-in">
             <img src="../img/JoyeriaSwa1.jpg" alt="Reloj 1" class="img-reloj">
             <p class="nombre-reloj">Swarovski Bracelet</p>
             <p class="precio">$4,999</p>
             <button class="comprar-btn">Comprar</button>
           </div>
 
-          <div class="producto">
+          <div class="producto fade-in">
             <img src="../img/JoyeriaSwa2.jpg" alt="Reloj 2" class="img-reloj">
             <p class="nombre-reloj">Swarovski Flowers Earrings</p>
             <p class="precio">$2,999</p>
             <button class="comprar-btn">Comprar</button>
           </div>
 
-          <div class="producto">
+          <div class="producto fade-in">
             <img src="../img/JoyeriaSwa3.jpg" alt="Reloj 3" class="img-reloj">
             <p class="nombre-reloj">Swarovski Swan Necklace</p>
             <p class="precio">$6,999</p>
@@ -49,29 +49,48 @@
           </div>
     </div>
 
-    <h1 class="titulo-relojes">Versace</h1>
+    <h1 class="titulo-relojes fade-in">Versace</h1>
         <div class="galeria"> <!-- Versace -->
-          <div class="producto">
+          <div class="producto fade-in">
             <img src="../img/JoyeriaVers1.jpg" alt="Reloj 1" class="img-reloj">
             <p class="nombre-reloj">Versace Gold Bracelet</p>
             <p class="precio">$5,999</p>
             <button class="comprar-btn">Comprar</button>
           </div>
 
-          <div class="producto">
+          <div class="producto fade-in">
             <img src="../img/JoyeriaVers2.jpg" alt="Reloj 2" class="img-reloj">
             <p class="nombre-reloj">Versace Necklace</p>
             <p class="precio">$1,999</p>
             <button class="comprar-btn">Comprar</button>
           </div>
-          
-          <div class="producto">
+
+          <div class="producto fade-in">
             <img src="../img/JoyeriaVers3.jpg" alt="Reloj 3" class="img-reloj">
             <p class="nombre-reloj">Versace Gold Ring</p>
             <p class="precio">$4,999</p>
             <button class="comprar-btn">Comprar</button>
           </div>
     </div>
+
+    <script> /* Efecto de Aparicion */
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+      </script>
 
     <footer class="footer">
       <div class="footer-container">

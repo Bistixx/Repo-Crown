@@ -26,30 +26,30 @@
         </nav>
     </header>
     
-    <h1 class="titulo-relojes">Relojes Premium</h1>
+    <h1 class="titulo-relojes fade-in">Relojes Premium</h1>
       <div class="galeria">
-        <div class="producto">
+        <div class="producto fade-in">
           <img src="../img/Reloj1.jpg" alt="Reloj 1" class="img-reloj">
           <p class="nombre-reloj">Reloj Olevs</p>
           <p class="precio">$24,999</p>
           <button class="comprar-btn">Comprar</button>
         </div>
 
-        <div class="producto">
+        <div class="producto fade-in">
           <img src="../img/Reloj2.jpg" alt="Reloj 2" class="img-reloj">
           <p class="nombre-reloj">Reloj Rolex Marine</p>
           <p class="precio">$34,999</p>
           <button class="comprar-btn">Comprar</button>
         </div>
 
-        <div class="producto">
+        <div class="producto fade-in">
           <img src="../img/Reloj3.jpg" alt="Reloj 3" class="img-reloj">
           <p class="nombre-reloj">Reloj Rolex Royal</p>
           <p class="precio">$54,999</p>
           <button class="comprar-btn">Comprar</button>
         </div>
 
-        <div class="producto">
+        <div class="producto fade-in">
           <img src="../img/Reloj4.jpg" alt="Reloj 4" class="img-reloj">
           <p class="nombre-reloj">Reloj Rolex Esmeralda</p>
           <p class="precio">$24,999</p>
@@ -57,36 +57,55 @@
         </div>
       </div>
       
-      <h1 class="titulo-relojes">Relojes Recomendados</h1>
+      <h1 class="titulo-relojes fade-in">Relojes Recomendados</h1>
         <div class="galeria">
-          <div class="producto">
+          <div class="producto fade-in">
             <img src="../img/Recomendado1.jpg" alt="Reloj 1" class="img-reloj">
             <p class="nombre-reloj">Reloj Versace Royal</p>
             <p class="precio">$14,999</p>
             <button class="comprar-btn">Comprar</button>
           </div>
 
-          <div class="producto">
+          <div class="producto fade-in">
             <img src="../img/Recomendado2.jpg" alt="Reloj 2" class="img-reloj">
             <p class="nombre-reloj">Reloj Citizen White</p>
             <p class="precio">$9,999</p>
             <button class="comprar-btn">Comprar</button>
           </div>
 
-          <div class="producto">
+          <div class="producto fade-in">
             <img src="../img/Recomendado3.jpg" alt="Reloj 3" class="img-reloj">
             <p class="nombre-reloj">Reloj Festina</p>
             <p class="precio">$9,999</p>
             <button class="comprar-btn">Comprar</button>
           </div>
-          
-          <div class="producto">
+
+          <div class="producto fade-in">
             <img src="../img/Recomendado4.jpg" alt="Reloj 4" class="img-reloj">
             <p class="nombre-reloj">Reloj Richard Mille</p>
             <p class="precio">$14,999</p>
             <button class="comprar-btn">Comprar</button>
           </div>
         </div>
+
+        <script> /* Efecto de Aparicion */
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+      </script>
 
       <footer class="footer">
         <div class="footer-container">
