@@ -1,120 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Proximos Relojes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../JS/main.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Proximos Relojes</title>
 </head>
-<body class="body--proximos">
-        <header>
-        <a href="../index.html">
-            <div class="logo-container">
-                <img src="../img/CrownLogo.png" alt="Crown Logo" class="logo--header">
-                <span class="logo-text">Crown</span>
-              </div>              
-        </a>
-        <nav class="headerNav">
-            <ul class="headerNavList">
-              <li class="item--lista"></li><a href="../index.html">Inicio</a>
-              <li class="item--lista"></li><a href="catalogo.html">Catalogo</a>
-              <li class="item--lista"></li><a href="proximos.html">Soon</a>
-              <li class="item--lista"></li><a href="joyeria.html">Jewellery</a>
-              <li class="item--lista"></li><a href="nosotros.html">Conocenos</a>
-              <li class="item--lista"></li><a href="https://www.instagram.com/rolex/" target="_blank">Contacto</a>
-            </ul>
-        </nav>
-    </header>
-    <h1 class="titulo-relojes fade-in">Proximos Relojes</h1>
-      <div class="galeria"> <!-- Proximos -->
-        <div class="producto fade-in">
-            <img src="../img/Soon1.jpg" alt="Reloj 1" class="img-reloj">
-            <p class="nombre-reloj">Reloj Rolex Imperial</p>
-            <p class="precio">No Price</p>
-            <button class="comprar-btn">Out</button>
-          </div>
+<body class="body--main">
+  <header>
+    <a href="../index.html">
+      <div class="logo-container">
+        <img src="../img/CrownLogo.png" alt="Crown Logo" class="logo--header">
+        <span class="logo-text">Crown</span>
+      </div>              
+    </a>
+    <nav class="headerNav">
+      <ul class="headerNavList">
+        <li class="item--lista"><a href="../index.html">Inicio</a></li>
+        <li class="item--lista"><a href="catalogo.html">Catálogo</a></li>
+        <li class="item--lista"><a href="proximos.html">Soon</a></li>
+        <li class="item--lista"><a href="joyeria.html">Jewellery</a></li>
+        <li class="item--lista"><a href="nosotros.html">Conócenos</a></li>
+        <li class="item--lista"><a href="https://www.instagram.com/rolex/" target="_blank">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-          <div class="producto fade-in">
-            <img src="../img/Soon2.jpg" alt="Reloj 2" class="img-reloj">
-            <p class="nombre-reloj">Reloj Geneva Black</p>
-            <p class="precio">No Price</p>
-            <button class="comprar-btn">Out</button>
-          </div>
+  <main> <!-- SOON -->
+    <h1 class="titulo-relojes fade-in">Próximos Relojes</h1>
 
-          <div class="producto fade-in">
-            <img src="../img/Soon3.jpg" alt="Reloj 3" class="img-reloj">
-            <p class="nombre-reloj">Reloj Rolex Daytona</p>
-            <p class="precio">No Price</p>
-            <button class="comprar-btn">Out</button>
-          </div>
-    </div>
+    <section class="galeria"> <!-- PARTE 1 -->
+      <section class="producto fade-in">
+        <img src="../img/Soon1.jpg" alt="Reloj 1" class="img-reloj">
+        <p class="nombre-reloj">Reloj Rolex Imperial</p>
+        <p class="precio">No Price</p>
+        <button class="comprar-btn">Out</button>
+      </section>
 
-        <div class="galeria"> <!-- Proximos Parte 2 -->
-          <div class="producto fade-in">
-            <img src="../img/Soon4.jpg" alt="Reloj 1" class="img-reloj">
-            <p class="nombre-reloj">Reloj Gucci Bee</p>
-            <p class="precio">No Price</p>
-            <button class="comprar-btn">Out</button>
-          </div>
+      <section class="producto fade-in">
+        <img src="../img/Soon2.jpg" alt="Reloj 2" class="img-reloj">
+        <p class="nombre-reloj">Reloj Geneva Black</p>
+        <p class="precio">No Price</p>
+        <button class="comprar-btn">Out</button>
+      </section>
 
-          <div class="producto fade-in">
-            <img src="../img/Soon5.jpg" alt="Reloj 2" class="img-reloj">
-            <p class="nombre-reloj">Reloj Citizen Minimalist</p>
-            <p class="precio">No Price</p>
-            <button class="comprar-btn">Out</button>
-          </div>
+      <section class="producto fade-in">
+        <img src="../img/Soon3.jpg" alt="Reloj 3" class="img-reloj">
+        <p class="nombre-reloj">Reloj Rolex Daytona</p>
+        <p class="precio">No Price</p>
+        <button class="comprar-btn">Out</button>
+      </section>
+    </section>
 
-          <div class="producto fade-in">
-            <img src="../img/Soon6.jpg" alt="Reloj 3" class="img-reloj">
-            <p class="nombre-reloj">Reloj Festina RedBlack</p>
-            <p class="precio">No Price</p>
-            <button class="comprar-btn">Out</button>
-          </div>
-    </div>
+    <section class="galeria"> <!-- PARTE 2 -->
+      <section class="producto fade-in">
+        <img src="../img/Soon4.jpg" alt="Reloj 4" class="img-reloj">
+        <p class="nombre-reloj">Reloj Gucci Bee</p>
+        <p class="precio">No Price</p>
+        <button class="comprar-btn">Out</button>
+      </section>
 
-    <script> /* Efecto de Aparicion */
-  const faders = document.querySelectorAll('.fade-in');
+      <section class="producto fade-in">
+        <img src="../img/Soon5.jpg" alt="Reloj 5" class="img-reloj">
+        <p class="nombre-reloj">Reloj Citizen Minimalist</p>
+        <p class="precio">No Price</p>
+        <button class="comprar-btn">Out</button>
+      </section>
 
-  const appearOnScroll = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
+      <section class="producto fade-in">
+        <img src="../img/Soon6.jpg" alt="Reloj 6" class="img-reloj">
+        <p class="nombre-reloj">Reloj Festina RedBlack</p>
+        <p class="precio">No Price</p>
+        <button class="comprar-btn">Out</button>
+      </section>
+    </section>
+  </main>
 
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
-      </script>
+  <footer class="footer"> <!-- FOOTER -->
+    <section class="footer-container">
+      <section class="footer-column">
+        <h3>Sobre Nosotros</h3>
+        <p>Pasión por la elegancia y la precisión. Relojes auténticos para quienes valoran cada segundo.</p>
+      </section>
 
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-column">
-          <h3>Sobre Nosotros</h3>
-          <p>Pasión por la elegancia y la precisión. Relojes auténticos para quienes valoran cada segundo.</p>
-        </div>
-    
-        <div class="footer-column">
-          <h3>Contacto</h3>
-          <p>Email: contacto@Crown.com</p>
-          <p>Tel: +54 341 624 8716</p>
-        </div>
-    
-        <div class="footer-column">
-          <h3>Síguenos</h3>
-          <p>
-            <a href="https://www.facebook.com/rolex" target="_blank">Facebook</a> · 
-            <a href="https://www.instagram.com/rolex/" target="_blank">Instagram</a> · 
-            <a href="https://x.com/ROLEX" target="_blank">Twitter</a>
-          </p>
-        </div>
-      </div>
-    
-      <div class="footer-bottom">
-        <p>&copy; 2025 Crown. Todos los derechos reservados.</p>
-      </div>
+      <section class="footer-column">
+        <h3>Contacto</h3>
+        <p>Email: contacto@Crown.com</p>
+        <p>Tel: +54 341 624 8716</p>
+      </section>
+
+      <section class="footer-column">
+        <h3>Síguenos</h3>
+        <p>
+          <a href="https://www.facebook.com/rolex" target="_blank">Facebook</a> · 
+          <a href="https://www.instagram.com/rolex/" target="_blank">Instagram</a> · 
+          <a href="https://x.com/ROLEX" target="_blank">Twitter</a>
+        </p>
+      </section>
+    </section>
+
+    <section class="footer-bottom">
+      <p>&copy; 2025 Crown. Todos los derechos reservados.</p>
+    </section>
+  </footer>
+</body>
 </html>

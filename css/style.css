@@ -1,27 +1,7 @@
 /*Body y Header*/
-.body--index{
+.body--main{
     background-color: rgb(4, 41, 9);
     margin: 0;
-    font-family:'Courier New', Courier, monospace;
-}
-.body--catalogo{
-    margin: 0;
-    background-color: rgb(4, 41, 9);
-    font-family:'Courier New', Courier, monospace;
-}
-.body--nosotros{
-    margin: 0;
-    background-color: rgb(4, 41, 9);
-    font-family:'Courier New', Courier, monospace;
-}
-.body--proximos{
-    margin: 0;
-    background-color: rgb(4, 41, 9);
-    font-family:'Courier New', Courier, monospace;
-}
-.body--joyeria{
-    margin: 0;
-    background-color: rgb(4, 41, 9);
     font-family:'Courier New', Courier, monospace;
 }
 header{
