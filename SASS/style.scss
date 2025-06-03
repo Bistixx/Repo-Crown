@@ -3,6 +3,7 @@ $verde-header: rgb(3, 29, 7);
 $dorado: #FFD700;
 $blanco: #ffffff;
 
+/* BODY */
 body {
 margin: 0;
 font-family: 'Courier New', Courier, monospace;
@@ -13,6 +14,7 @@ background-color: #001a00;
 background-color: $verde-fondo;
 }
 
+/* HEADER */
 header {
 display: flex;
 justify-content: space-between;
@@ -90,6 +92,7 @@ ul {
 display: flex;
 }
 
+/* LISTA */
 .item--lista,
 .item-conocenos {
 list-style: none;
@@ -108,6 +111,7 @@ text-decoration: none;
 color: $blanco;
 }
 
+/* RELOJES */
 .titulo-relojes {
 text-align: center;
 font-size: 3.5rem;
@@ -209,6 +213,7 @@ color: white;
 margin: 10px 0;
 }
 
+/* NOSOTROS */
 .contenedor-nosotros {
 max-width: 1000px;
 margin: auto;
@@ -242,6 +247,7 @@ background: #d4af37;
 margin: 30px 0;
 }
 
+/* FOOTER */
 .footer {
 background-color: #001a12;
 color: $blanco;
@@ -288,6 +294,7 @@ font-size: 0.9em;
 color: #bbbbbb;
 }
 
+/* MEDIA */
 @media (max-width: 768px) {
 .header {
 align-items: flex-start;
@@ -304,6 +311,7 @@ li a {
 }
 }}
 
+/* FADE IN */
 .fade-in {
 opacity: 0;
 transform: translateY(20px);
@@ -313,4 +321,48 @@ transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 opacity: 1;
 transform: translateY(0);
 }
+}
+
+/* Grid Galería Patrocinadores */
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // 3 columnas
+  grid-template-rows: repeat(2, auto);   // 2 filas automáticas
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 100px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sponsor {
+  background-color: #0b2c0b;
+  border-radius: 12px;
+  padding: 15px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px 10px rgba(255, 215, 0, 0.4);
+  }
+
+  .nombre-sponsor {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ddc472;
+    margin: 10px 0;
+    text-align: center;
+  }
 }

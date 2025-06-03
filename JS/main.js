@@ -1,3 +1,4 @@
+/* FADE IN */
 document.addEventListener('DOMContentLoaded', () => {
   const faders = document.querySelectorAll('.fade-in');
 

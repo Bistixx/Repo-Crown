@@ -158,6 +158,7 @@ body {
     flex-direction: column;
     align-items: center;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
 .img-reloj{
@@ -168,7 +169,8 @@ body {
 }
 
   .producto:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
+    box-shadow: 0 0 25px 10px rgba(255, 215, 0, 0.4);
   }
   
   .producto img {
@@ -323,3 +325,52 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Grid Galeria Patrocinadores */
+    .grid-galeria {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+      grid-template-rows: repeat(2, auto);   /* 2 filas automáticas */
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+      margin-bottom: 100px;
+    }
+
+    .sponsor {
+    background-color: #0b2c0b;
+    border-radius: 12px;
+    padding: 15px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .sponsor:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px 10px rgba(255, 215, 0, 0.4);
+    }
+
+    .nombre-sponsor {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ddc472;
+    margin: 10px 0;
+    text-align: center;
+    }
+
+    /* MEDIA */
+        @media (max-width: 768px) {
+      .grid-galeria {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid-galeria {
+        grid-template-columns: 1fr;
+      }
+    }
