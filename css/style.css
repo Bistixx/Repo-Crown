@@ -377,12 +377,18 @@ body {
 
     /* BOTON HAMBURGUESA */
     .menu-toggle {
-    font-size: 28px;
+    font-size: 30px;
     color: white;
     cursor: pointer;
-    display: block;
+    display: flex;
     z-index: 1001;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+    .menu-toggle:hover {
+      transform: scale(1.3);
+    }
+
+
     #headerNavList {
     display: none;
     flex-direction: column;
@@ -399,3 +405,71 @@ body {
     #headerNavList.active {
     display: flex;
     }
+
+    /* ATENCION AL CLIENTE */
+.atencion-cliente-contenido {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around;
+  gap: 20px;
+}
+.opcion-contacto {
+  background-color: rgb(3, 29, 7);
+  border: 1px solid #D4AF37;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: calc(50% - 40px);
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.opcion-contacto h3 {
+  color: #D4AF37;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.opcion-contacto p {
+  color: #FFFFFF;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+.opcion-contacto p a {
+    color: #D4AF37;
+    text-decoration: none;
+}
+.opcion-contacto p a:hover {
+    text-decoration: underline;
+}
+
+/* BOTON DE ATENCION */
+.btn-atencion {
+  display: inline-block;
+  background-color: #D4AF37;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-atencion:hover {
+  background-color: #b89b30;
+}
+
+/* BOTON DE CHAT */
+.btn-atencion.btn-chat {
+    background-color: transparent;
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+}
+.btn-atencion.btn-chat:hover {
+    background-color: #D4AF37;
+    color: #000000;
+}
