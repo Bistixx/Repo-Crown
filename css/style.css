@@ -374,3 +374,28 @@ body {
         grid-template-columns: 1fr;
       }
     }
+
+    /* BOTON HAMBURGUESA */
+    .menu-toggle {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    z-index: 1001;
+    }
+    #headerNavList {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #021b05;
+    border: 1px solid #ffffff30;
+    border-radius: 10px;
+    padding: 10px 20px;
+    z-index: 999;
+    }
+
+    #headerNavList.active {
+    display: flex;
+    }
