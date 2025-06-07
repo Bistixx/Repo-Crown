@@ -9,7 +9,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: rgb(3, 29, 7) ;
+    background-color: rgb(3, 29, 7);
     max-height: 20vh;
     position: sticky;
     top: 0;
@@ -472,4 +472,50 @@ body {
 .btn-atencion.btn-chat:hover {
     background-color: #D4AF37;
     color: #000000;
+}
+
+/* BARRA DE BUSQUEDA */
+.buscar {
+  background-color: #c9a93d;
+  color: #0d1f0e;
+  border: none;
+  padding: 6px 16px;
+  margin-left: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.buscar:hover {
+  background-color: #e0c46c;
+  color: #0d1f0e;
+  box-shadow: 0 0 5px #c9a93d;
+}
+
+.barra {
+  background-color: transparent;
+  border: 1px solid #c9a93d;
+  color: #fff;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-family: 'Georgia', serif;
+  transition: all 0.3s ease;
+}
+.barra::placeholder {
+  color: #c9a93d;
+  font-style: italic;
+}
+.barra:focus {
+  background-color: #102915;
+  border-color: #e0c46c;
+  outline: none;
+  box-shadow: 0 0 5px #c9a93d;
+}
+
+.barra-contenedor {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 12px;
+  background-color: #0d1f0e; /* verde oscuro */
+  box-shadow: 0 0 10px rgba(201, 169, 61, 0.4); /* brillo dorado */
 }
