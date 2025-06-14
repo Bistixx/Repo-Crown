@@ -1,0 +1,22 @@
+$verde-fondo: rgb(4, 41, 9);
+$verde-header: rgb(3, 29, 7);
+$dorado: #FFD700;
+$blanco: #ffffff;
+
+.item--lista,
+.item-conocenos {
+list-style: none;
+margin: 5px;
+}
+
+.lista-conocenos {
+display: flex;
+margin-top: 10px;
+color: #cce5cc;
+font-size: 1em;
+}
+
+a {
+text-decoration: none;
+color: $blanco;
+}

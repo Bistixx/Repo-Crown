@@ -1,0 +1,37 @@
+$verde-fondo: rgb(4, 41, 9);
+$verde-header: rgb(3, 29, 7);
+$dorado: #FFD700;
+$blanco: #ffffff;
+
+.contenedor-nosotros {
+max-width: 1000px;
+margin: auto;
+padding: 40px 20px;
+}
+
+.titulo-nosotros {
+color: #d4af37;
+font-size: 2em;
+margin-bottom: 20px;
+}
+
+.titulo2-nosotros {
+color: #d4af37;
+font-size: 1.5em;
+margin-top: 40px;
+margin-bottom: 10px;
+}
+
+.text-nosotros {
+color: #e0e0e0;
+font-size: 20px;
+margin-left: 5%;
+margin-right: 5%;
+}
+
+.decoracion-nosotros {
+border: none;
+height: 2px;
+background: #d4af37;
+margin: 30px 0;
+}

@@ -1,0 +1,30 @@
+$verde-fondo: rgb(4, 41, 9);
+$verde-header: rgb(3, 29, 7);
+$dorado: #FFD700;
+$blanco: #ffffff;
+
+.menu-toggle {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  z-index: 1001;
+}
+
+// Lista del menú (hamburguesa)
+#headerNavList {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: #021b05;
+  border: 1px solid rgba(255, 255, 255, 0.188);
+  border-radius: 10px;
+  padding: 10px 20px;
+  z-index: 999;
+
+  &.active {
+    display: flex;
+  }
+}

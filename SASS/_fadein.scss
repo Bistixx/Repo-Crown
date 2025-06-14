@@ -1,0 +1,15 @@
+$verde-fondo: rgb(4, 41, 9);
+$verde-header: rgb(3, 29, 7);
+$dorado: #FFD700;
+$blanco: #ffffff;
+
+.fade-in {
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+&.show {
+opacity: 1;
+transform: translateY(0);
+}
+}

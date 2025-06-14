@@ -1,0 +1,105 @@
+$verde-fondo: rgb(4, 41, 9);
+$verde-header: rgb(3, 29, 7);
+$dorado: #FFD700;
+$blanco: #ffffff;
+
+.titulo-relojes {
+text-align: center;
+font-size: 3.5rem;
+font-family: 'Georgia', serif;
+font-weight: bold;
+color: #d4af37;
+text-shadow: 2px 2px 4px #000;
+margin-top: 40px;
+margin-bottom: 40px;
+position: relative;
+
+&::after {
+content: "";
+display: block;
+width: 100px;
+height: 4px;
+background: linear-gradient(to right, #d4af37, #fff8dc, #d4af37);
+margin: 10px auto 0;
+border-radius: 2px;
+animation: brillo-barra 4s infinite linear;
+}
+}
+
+@keyframes brillo-barra {
+0% {
+background-position: 0% center;
+}
+100% {
+background-position: 200% center;
+}
+}
+
+.galeria {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 30px;
+padding: 40px;
+}
+
+.producto {
+background-color: #0b2c0b;
+border-radius: 12px;
+padding: 15px;
+width: 250px;
+display: flex;
+flex-direction: column;
+align-items: center;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+
+&:hover {
+transform: scale(1.03);
+}
+
+img {
+width: 100%;
+border-radius: 10px;
+}
+}
+
+.img-reloj {
+width: 100%;
+height: 300px;
+object-fit: cover;
+border-radius: 10px;
+}
+
+.comprar-btn {
+margin-top: 10px;
+padding: 10px 20px;
+background-color: $dorado;
+border: none;
+border-radius: 5px;
+color: #000;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.3s, transform 0.3s;
+
+&:hover {
+background-color: #ffcc00;
+transform: scale(1.1);
+}
+}
+
+.precio,
+.nombre-reloj {
+font-size: 18px;
+font-weight: bold;
+text-align: center;
+}
+
+.precio {
+color: $dorado;
+margin: 10px 0;
+}
+
+.nombre-reloj {
+color: white;
+margin: 10px 0;
+}

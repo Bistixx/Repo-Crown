@@ -1,257 +1,42 @@
-/*Body y Header*/
-.body--main{
-    background-color: rgb(4, 41, 9);
-    margin: 0;
-    font-family:'Courier New', Courier, monospace;
-}
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: rgb(3, 29, 7);
-    max-height: 20vh;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    transition: background-color 0.3s ease;
-}
-.logo-container {
-    display: flex;
-    align-items: center;
-    background-color: rgb(3, 29, 7); 
-    padding: 10px;
-  }
-  
-.logo--header {
-    width: 60px;
-    height: auto;
-  }
-  
-.logo-text {
-    font-size: 40px;
-    margin-left: 15px;
-    color: white;
-  }
-
-
-  /*HeaderNav*/
-    .headerNav {
-        background-color: rgb(3, 29, 7);
-        padding: 10px;
-        text-align: center;
-      }
-      
-      .headerNav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: inline-flex;
-        gap: 20px;
-      }
-      
-      .headerNav a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        position: relative;
-        transition: color 0.3s ease;
-      }
-      
-      /* Línea animada debajo del texto */
-      .headerNav a::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -3px;
-        width: 100%;
-        height: 2px;
-        background-color: #FFD700; /* dorado */
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 0.3s ease;
-      }
-      
-      /* Hover animation */
-      .headerNav a:hover {
-        color: #FFD700;
-      }
-      
-      .headerNav a:hover::after {
-        transform: scaleX(1);
-        transform-origin: left;
-      }
-
-
-/*Logos, Links y Listas*/
-ul{
-    display: flex;
-}
-.item--lista{
-    list-style: none;
-    margin: 5px;
-    
+.menu-toggle {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  z-index: 1001;
 }
 
-.lista-conocenos{
+#headerNavList {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: #021b05;
+  border: 1px solid rgba(255, 255, 255, 0.188);
+  border-radius: 10px;
+  padding: 10px 20px;
+  z-index: 999;
+}
+#headerNavList.active {
   display: flex;
 }
-.item-conocenos{
-  list-style: none;
-  margin: 5px;
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-a{
-    text-decoration: none;
-    color: white;
-}
-
-/*Titulo de Galeria*/
-.titulo-relojes {
-    text-align: center;
-    font-size: 3.5rem;
-    font-family: 'Georgia', serif;
-    font-weight: bold;
-    color: #d4af37;
-    text-shadow: 2px 2px 4px #000;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    position: relative;
-  }
-  
-  .titulo-relojes::after {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(to right, #d4af37, #fff8dc, #d4af37);
-    margin: 10px auto 0;
-    border-radius: 2px;
-    animation: brillo-barra 4s infinite linear;
-  }
-  
-  @keyframes brillo-barra {
-    0% { background-position: 0% center; }
-    100% { background-position: 200% center; }
-  }
-/*Galeria Relojes Inicio*/
-body {
-    background-color: #001a00;
-    margin: 0;
-    font-family: sans-serif;
-  }
-  
-  .galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px; /* Espacio entre tarjetas */
-    padding: 40px; /* Espacio interior del contenedor */
-  }
-  
-  .producto {
-    background-color: #0b2c0b;
-    border-radius: 12px;
-    padding: 15px;
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-.img-reloj{
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-  .producto:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px 10px rgba(255, 215, 0, 0.4);
-  }
-  
-  .producto img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  /* Botón comprar */
-  .comprar-btn {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #ffd700;
-    border: none;
-    border-radius: 5px;
-    color: #000;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .comprar-btn:hover {
-    background-color: #ffcc00;
-    transform: scale(1.1);
-  }
-
-  .precio {
-    font-size: 18px;
-    font-weight: bold;
-    color: #FFD700; /* dorado para destacar */
-    margin: 10px 0;
-    text-align: center;
-  }
-  .nombre-reloj{
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  /*Nosotros*/
-.contenedor-nosotros{
-  max-width: 1000px;
-  margin: auto;
-  padding: 40px 20px;
-}
-.titulo-nosotros{
-  color: #d4af37;
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-.titulo2-nosotros{
-  color: #d4af37;
-  font-size: 1.5em;
-  margin-top: 40px;
-  margin-bottom: 10px;
-}
-.text-nosotros{
-  color: #e0e0e0;
-  font-size: 20px;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-.lista-conocenos{
-  margin-top: 10px;
-  color: #cce5cc;
-  font-size: 1em;
-}
-.decoracion-nosotros{
-  border: none;
-  height: 2px;
-  background: #d4af37;
-  margin: 30px 0;
-}
-
-/* Footer */
 .footer {
-  background-color: #001a12; /* Verde más oscuro */
+  background-color: #001a12;
   color: #ffffff;
   padding: 40px 20px 20px;
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
 }
 
 .footer-container {
@@ -269,19 +54,18 @@ body {
   flex: 1;
   min-width: 250px;
 }
-
 .footer-column h3 {
   color: #d4af37;
   margin-bottom: 10px;
   font-size: 1.2em;
 }
-
-.footer-column p, .footer-column a {
+.footer-column p,
+.footer-column a {
   color: #e0e0e0;
   text-decoration: none;
   font-size: 0.95em;
 }
-
+.footer-column p:hover,
 .footer-column a:hover {
   color: #d4af37;
   text-decoration: underline;
@@ -293,229 +77,293 @@ body {
   font-size: 0.9em;
   color: #bbbbbb;
 }
-/* Media Query */
+
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+@media (max-width: 768px) {
+  .grid-galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .grid-galeria {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sponsor {
+  background-color: #0b2c0b;
+  border-radius: 12px;
+  padding: 15px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.sponsor:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px 10px rgba(255, 215, 0, 0.4);
+}
+.sponsor .nombre-sponsor {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ddc472;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.item--lista,
+.item-conocenos {
+  list-style: none;
+  margin: 5px;
+}
+
+.lista-conocenos {
+  display: flex;
+  margin-top: 10px;
+  color: #cce5cc;
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.contenedor-nosotros {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.titulo-nosotros {
+  color: #d4af37;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.titulo2-nosotros {
+  color: #d4af37;
+  font-size: 1.5em;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.text-nosotros {
+  color: #e0e0e0;
+  font-size: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.decoracion-nosotros {
+  border: none;
+  height: 2px;
+  background: #d4af37;
+  margin: 30px 0;
+}
+
+.titulo-relojes {
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: "Georgia", serif;
+  font-weight: bold;
+  color: #d4af37;
+  text-shadow: 2px 2px 4px #000;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.titulo-relojes::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #d4af37, #fff8dc, #d4af37);
+  margin: 10px auto 0;
+  border-radius: 2px;
+  animation: brillo-barra 4s infinite linear;
+}
+
+@keyframes brillo-barra {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+}
+
+.producto {
+  background-color: #0b2c0b;
+  border-radius: 12px;
+  padding: 15px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.producto:hover {
+  transform: scale(1.03);
+}
+.producto img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.img-reloj {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.comprar-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #FFD700;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.comprar-btn:hover {
+  background-color: #ffcc00;
+  transform: scale(1.1);
+}
+
+.precio,
+.nombre-reloj {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.precio {
+  color: #FFD700;
+  margin: 10px 0;
+}
+
+.nombre-reloj {
+  color: white;
+  margin: 10px 0;
+}
+
+/* BODY */
+body {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #001a00;
+}
+
+.body--main {
+  background-color: rgb(4, 41, 9);
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(3, 29, 7);
+  max-height: 20vh;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
+header .logo-container {
+  display: flex;
+  align-items: center;
+  background-color: rgb(3, 29, 7);
+  padding: 10px;
+}
+header .logo-container .logo--header {
+  width: 60px;
+  height: auto;
+}
+header .logo-container .logo-text {
+  font-size: 40px;
+  margin-left: 15px;
+  color: #ffffff;
+}
+
+.headerNav {
+  background-color: rgb(3, 29, 7);
+  padding: 10px;
+  text-align: center;
+}
+.headerNav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  gap: 20px;
+}
+.headerNav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.headerNav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: #FFD700;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+.headerNav a:hover {
+  color: #FFD700;
+}
+.headerNav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+ul {
+  display: flex;
+}
+
+/* MEDIA */
 @media (max-width: 768px) {
   .header {
     align-items: flex-start;
   }
-
   .headerNavList {
     flex-direction: column;
     align-items: stretch;
     padding: 0.5rem 0;
   }
-
   .headerNavList li a {
     text-align: center;
     width: 100%;
   }
-}
-
-/* Efecto Aparicion */
-
-/* Estado inicial oculto */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-/* Estado visible */
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Grid Galeria Patrocinadores */
-    .grid-galeria {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-      grid-template-rows: repeat(2, auto);   /* 2 filas automáticas */
-      gap: 20px;
-      max-width: 1200px;
-      margin: auto;
-      margin-bottom: 100px;
-    }
-
-    .sponsor {
-    background-color: #0b2c0b;
-    border-radius: 12px;
-    padding: 15px;
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .sponsor:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 25px 10px rgba(255, 215, 0, 0.4);
-    }
-
-    .nombre-sponsor {
-    font-size: 18px;
-    font-weight: bold;
-    color: #ddc472;
-    margin: 10px 0;
-    text-align: center;
-    }
-
-    /* MEDIA */
-        @media (max-width: 768px) {
-      .grid-galeria {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .grid-galeria {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* BOTON HAMBURGUESA */
-    .menu-toggle {
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    display: flex;
-    z-index: 1001;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .menu-toggle:hover {
-      transform: scale(1.3);
-    }
-
-
-    #headerNavList {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background-color: #021b05;
-    border: 1px solid #ffffff30;
-    border-radius: 10px;
-    padding: 10px 20px;
-    z-index: 999;
-    }
-
-    #headerNavList.active {
-    display: flex;
-    }
-
-    /* ATENCION AL CLIENTE */
-.atencion-cliente-contenido {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-around;
-  gap: 20px;
-}
-.opcion-contacto {
-  background-color: rgb(3, 29, 7);
-  border: 1px solid #D4AF37;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  width: calc(50% - 40px);
-  margin-bottom: 20px;
-  box-sizing: border-box;
-}
-
-.opcion-contacto h3 {
-  color: #D4AF37;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.opcion-contacto p {
-  color: #FFFFFF;
-  font-size: 0.9em;
-  line-height: 1.6;
-}
-
-.opcion-contacto p a {
-    color: #D4AF37;
-    text-decoration: none;
-}
-.opcion-contacto p a:hover {
-    text-decoration: underline;
-}
-
-/* BOTON DE ATENCION */
-.btn-atencion {
-  display: inline-block;
-  background-color: #D4AF37;
-  color: #000000;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 15px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-atencion:hover {
-  background-color: #b89b30;
-}
-
-/* BOTON DE CHAT */
-.btn-atencion.btn-chat {
-    background-color: transparent;
-    border: 2px solid #D4AF37;
-    color: #D4AF37;
-}
-.btn-atencion.btn-chat:hover {
-    background-color: #D4AF37;
-    color: #000000;
-}
-
-/* BARRA DE BUSQUEDA */
-.buscar {
-  background-color: #c9a93d;
-  color: #0d1f0e;
-  border: none;
-  padding: 6px 16px;
-  margin-left: 8px;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-.buscar:hover {
-  background-color: #e0c46c;
-  color: #0d1f0e;
-  box-shadow: 0 0 5px #c9a93d;
-}
-
-.barra {
-  background-color: transparent;
-  border: 1px solid #c9a93d;
-  color: #fff;
-  border-radius: 8px;
-  padding: 6px 12px;
-  font-family: 'Georgia', serif;
-  transition: all 0.3s ease;
-}
-.barra::placeholder {
-  color: #c9a93d;
-  font-style: italic;
-}
-.barra:focus {
-  background-color: #102915;
-  border-color: #e0c46c;
-  outline: none;
-  box-shadow: 0 0 5px #c9a93d;
-}
-
-.barra-contenedor {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 5px;
-  border-radius: 12px;
-  background-color: #0d1f0e; /* verde oscuro */
-  box-shadow: 0 0 10px rgba(201, 169, 61, 0.4); /* brillo dorado */
-}
+}/*# sourceMappingURL=style.css.map */
