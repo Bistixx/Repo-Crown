@@ -5,6 +5,7 @@
 @import "lista";
 @import "nosotros";
 @import "relojes";
+@import "query";
 
 
 $verde-fondo: rgb(4, 41, 9);
@@ -14,12 +15,17 @@ $blanco: #ffffff;
 
 /* BODY */
 body {
-margin: 0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 font-family: 'Courier New', Courier, monospace;
 background-color: #001a00;
 }
 
 .body--main {
+    margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 background-color: $verde-fondo;
 }
 
@@ -28,7 +34,9 @@ header {
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 10px;
+width: 100%;
+padding: 0.5rem 1rem;
+flex-wrap: wrap;
 background-color: $verde-header;
 max-height: 20vh;
 position: sticky;
@@ -100,20 +108,3 @@ transition: color 0.3s ease;
 ul {
 display: flex;
 }
-
-/* MEDIA */
-@media (max-width: 768px) {
-.header {
-align-items: flex-start;
-}
-
-.headerNavList {
-flex-direction: column;
-align-items: stretch;
-padding: 0.5rem 0;
-
-li a {
-  text-align: center;
-  width: 100%;
-}
-}}

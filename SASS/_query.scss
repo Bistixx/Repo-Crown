@@ -1,0 +1,94 @@
+// =========================
+// CONFIGURACIÓN DE BREAKPOINTS
+// =========================
+
+$breakpoints: (
+  "xs": 320px,
+  "sm": 480px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1280px,
+  "xxl": 1440px
+);
+
+// =========================
+// MIXIN PARA MEDIA QUERIES
+// =========================
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "⚠️ El breakpoint '#{$breakpoint}' no existe en la configuración.";
+  }
+}
+
+// =========================
+// EJEMPLO DE USO EN COMPONENTES
+// =========================
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  @include respond-to("md") {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+
+    @include respond-to("xs") {
+      font-size: 1.5rem;
+    }
+  }
+
+  .menu-toggle {
+    font-size: 1.8rem;
+
+    @include respond-to("xs") {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.card {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1rem;
+
+  @include respond-to("sm") {
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+}
+
+// =========================
+// USO GENERAL
+// =========================
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  @include respond-to("xs") {
+    font-size: 14px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+
+  @include respond-to("lg") {
+    padding: 0.5rem;
+  }
+}
